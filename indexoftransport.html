@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>City-info | Transportation - Jabalpur</title>
+    <link rel="stylesheet" href="transportation.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="City-Info.png" alt="City-info Logo">
+        </div>
+        <ul class="nav-links">
+            <li><a href="indexoftravel.html">Home</a></li>
+            <li><a href="#">Transportation</a></li>
+            <li><a href="indexofcrimeproneareas.html">Crime Prone Areas</a></li>
+            <li><a href="indexofspecificplaces.html">Specific Places</a></li>
+            <li><a href="indexoffamousplace.html">Famous Places</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container">
+        <h2>Transportation in Jabalpur</h2>
+
+        <!-- Section 1: Enter Start and Destination Point -->
+        <div class="input-section">
+            <h3>Enter Start and Destination Points</h3>
+            <label for="start">Start Point (e.g., Railway Station):</label>
+            <input type="text" id="start" placeholder="Enter starting point in Jabalpur">
+            <label for="destination">Destination Point (e.g., Rani Durgavati Museum):</label>
+            <input type="text" id="destination" placeholder="Enter destination point in Jabalpur">
+            <button onclick="showSections()">Show Transport Options</button>
+        </div>
+
+        <!-- Section 2: Transportation Options -->
+        <div class="transport-section">
+            <h3>Transportation Options Available in Jabalpur</h3>
+            <div class="options">
+                <p><strong>Auto-Rickshaw</strong><br>Minimum fare: ₹30, Per km: ₹10</p>
+                <p><strong>Bus</strong><br>Local bus services, fares vary per route</p>
+                <p><strong>Taxi</strong><br>Starting fare: ₹100, Per km: ₹15</p>
+                <p><strong>Bike Rentals</strong><br>Starting from ₹300/day</p>
+            </div>
+        </div>
+
+        <!-- Section 3: Compare Transport Prices -->
+        <div class="pricing-section">
+            <h3>Compare Transport Prices</h3>
+            <p>Auto-Rickshaw: ₹10/km</p>
+            <p>Bus: ₹15-20/km</p>
+            <p>Taxi: ₹15/km</p>
+            <p>Bike Rental: ₹300/day</p>
+        </div>
+
+        <!-- Section 4: Flowchart of Selected Transport Option -->
+        <div class="flowchart-section">
+            <h3>Flowchart of Selected Transport Option</h3>
+            <img src="subway.jpg" alt="Flowchart" class="flowchart-image">
+        </div>
+
+        <!-- Section 5: Nearest Transport Availability -->
+        <div class="availability-section">
+            <h3>Nearest Transport Availability in Jabalpur</h3>
+           <a href="https://www.google.com/search?sca_esv=17ab544e82164aa4&sca_upv=1&rlz=1C1RXQR_enIN1083IN1083&sxsrf=ADLYWILOl379LyFsi3U-6TlRGLGPT7rp2w:1725740432639&q=jabalpur+station+google+map&npsic=0&rflfq=1&rllag=23166018,79948835,324&tbm=lcl&sa=X&ved=2ahUKEwiS6diL1LGIAxXH4zgGHVyMKwsQtgN6BAgfEAE&biw=1536&bih=695&dpr=1.25&pccc=1#rlfi=hd:;si:;mv:[[23.193472127374875,79.99956582327056],[23.14533704662061,79.90377646210979]]"><img src="google map.png" alt="Nearest Transport" class="nearest-image"></a> 
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2024 City-info. All rights reserved.</p>
+        <p>Contact us: <a href="mailto:info@city-info.com">info@city-info.com</a></p>
+        <p>Follow us: 
+            <a href="#">Facebook</a> | 
+            <a href="#">Twitter</a> | 
+            <a href="#">Instagram</a>
+        </p>
+    </footer>
+
+    <!-- JavaScript to Load Sections with Animation -->
+    <script>
+        function showSections() {
+            document.querySelector('.transport-section').classList.add('active');
+            document.querySelector('.pricing-section').classList.add('active');
+            setTimeout(() => {
+                document.querySelector('.flowchart-section').classList.add('active');
+                document.querySelector('.availability-section').classList.add('active');
+            }, 2000);
+        }
+        function loadSections() {
+    const start = document.getElementById('start').value;
+    const destination = document.getElementById('destination').value;
+
+    if (start && destination) {
+        // Show Section 2 and 3 after user inputs start and destination
+        setTimeout(() => {
+            document.getElementById('section2').classList.add('active');
+        }, 500);
+
+        setTimeout(() => {
+            document.getElementById('section3').classList.add('active');
+        }, 1000);
+    }
+
+    // Show Section 4 and 5 when transport is selected
+    setTimeout(() => {
+        document.getElementById('section4').classList.add('active');
+    }, 1500);
+
+    setTimeout(() => {
+        document.getElementById('section5').classList.add('active');
+    }, 2000);
+}
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

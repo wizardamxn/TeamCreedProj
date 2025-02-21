@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="shortcut icon" href="assets/img/favicon.png" type="image/png">
+
+        <!--=============== REMIXICONS ===============-->
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+        
+        <!--=============== SWIPER CSS ===============-->
+        <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+
+        <!--=============== CSS ===============-->
+        <link rel="stylesheet" href="styles.css">
+
+        <title>Responsive Website Travel</title>
+    </head>
+    <body>
+        <header class="header" id="header">
+            <nav class="nav container">
+                <a href="#" class="nav__logo " style="font-size: 30px;" >City-Info</a>
+
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a href="#home" class="nav__link active-link">Home</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#about" class="nav__link">About</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#discover" class="nav__link">Discover</a>
+                        </li>
+                        <li class="nav__item">
+                            <!-- Login Button -->
+                            <a href="#" class="nav__link" onclick="showLoginForm()">Login</a>
+                          </li>
+                          
+                          <!-- Login Form Modal -->
+                          <div id="loginModal" style="display: none;" class="modal">
+                            <div class="modal-content">
+                              <span class="close" onclick="closeLoginForm()">&times;</span>
+                              <h2>Login</h2>
+                              <form>
+                                <label for="username"></label>
+                                <input type="text" id="username" name="username" placeholder="Enter the Username" required>
+                                <label for="password"></label>
+                                <input type="password" id="password" name="password" placeholder="Enter the Password" required>
+                                <button type="submit" class="login-button">Login</button>
+                              </form>
+                            </div>
+                          </div>
+                          
+                    </ul>
+
+                    <div class="nav__dark">
+                        <!-- Theme change button -->
+                        <span class="change-theme-name">Dark mode</span>
+                        <i class="ri-moon-line change-theme" id="theme-button"></i>
+                    </div>
+
+                    <i class="ri-close-line nav__close" id="nav-close"></i>
+                </div>
+
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class="ri-function-line"></i>
+                </div>
+            </nav>
+        </header>
+
+        <main class="main">
+            <!--==================== HOME ====================-->
+            <section class="home" id="home">
+                <img src="citypng1.jpg" alt="" class="home__img">
+
+                <div class="home__container container grid">
+                    <div class="home__data">
+                        <span class="home__data-subtitle">Discover your city</span>
+                        <h1 class="home__data-title">Explore The <br> Best Cities</b></h1>
+                        <input type="text" placeholder="Enter the city name" style="padding: 10px; margin: 10px 10px 10px 0; border: 1px solid #ccc; border-radius: 28px; width: 6px;width: 45%;
+                        height: 50px;
+                        padding: 8px 12px;
+                        font-size: 19px;
+                        line-height: 33px;
+                        border: 3px solid rgba(68,68,68,0.8);
+                        -webkit-border-radius: 28px;
+                        -moz-border-radius: 28px;
+                        border-radius: 28px;
+                        outline:none;
+                    ">
+                        <a href="index.html" class="button" style="border-radius: 28px; background-color: #001d3d; color: white;">Explore</a>
+
+
+                    </div>
+
+                    <div class="home__social">
+                        <a href="https://www.facebook.com/" target="_blank" class="home__social-link">
+                            <i class="ri-facebook-box-fill"></i>
+                        </a>
+                        <a href="https://www.instagram.com/" target="_blank" class="home__social-link">
+                            <i class="ri-instagram-fill"></i>
+                        </a>
+                        <a href="https://twitter.com/" target="_blank" class="home__social-link">
+                            <i class="ri-twitter-fill"></i>
+                        </a>
+                    </div>
+
+                    <div class="home__info" style="background-color: #001d3d; border-radius: 20px;">
+                        <div>
+                            <span class="home__info-title">Popular Cities to visit</span>
+                            <a href="index.html" class="button button--flex button--link home__info-button">
+                                More <i class="ri-arrow-right-line"></i>
+                            </a>
+                        </div>
+                    
+                        <div class="home__info-overlay">
+                            <img src="delhi.png" alt="" class="home__info-img">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!--==================== ABOUT ====================-->
+            <section class="about section" id="about">
+                <div class="about__container container grid">
+                    <div class="about__data">
+                        <h2 class="section__title about__title">Welcome to City-Info
+                            <br></h2>
+                        <p class="about__description">
+                            City-info is your go-to travel companion, providing essential city information with ease. Explore
+                            transport options, discover the best shopping spots, find top tourist attractions, and stay informed about safety with real-time crime updates. Designed for a seamless user experience, City-info makes city exploration safe, efficient, and enjoyable.
+                            
+                            
+                        </p>
+                        
+                    </div>
+
+                    <div class="about__img">
+                        <div class="about__img-overlay">
+                            <img src="assets/img/about1.jpg" alt="" class="about__img-one">
+                        </div>
+
+                        <div class="about__img-overlay">
+                            <img src="assets/img/about2.jpg" alt="" class="about__img-two">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!--==================== DISCOVER ====================-->
+            <section class="discover section" id="discover">
+            </section>
+        
+            <h1 style="position: relative; bottom: 50px; text-align: center;">Popular Cities</h1>
+
+
+            
+            <div class="city-grid">
+                <div class="city-card">
+                    <img src="newmumbai.jpg" alt="City 1">
+                    <h3>MUMBAI</h3>
+                </div>
+                <div class="city-card">
+                    <img src="delhi.png" alt="City 2">
+                    <h3>NEW-DELHI</h3>
+                </div>
+                <div class="city-card">
+                    <img src="varanasi.png" alt="City 3">
+                    <h3>varansi</h3>
+                </div>
+                <div class="city-card">
+                    <img src="jabalpur.png" alt="City 4">
+                    <a href="index.html"><h3>JABALPUR</h3></a>
+                </div>
+                
+            </div>
+         </section>
+            </section>
+
+            <!--==================== EXPERIENCE ====================-->
+            <section class="experience section">
+                
+                        <div class="experience__overlay">
+                            <img src="assets/img/experience2.jpg" alt="" class="experience__img-two">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!--==================== VIDEO ====================-->
+            <!-- <section class="video section">
+                <h2 class="section__title">Video Tour</h2>
+
+                <div class="video__container container">
+                    <p class="video__description">Find out more with our video of the most beautiful and 
+                        pleasant places for you and your family.
+                    </p>
+
+                    <div class="video__content" style="
+    position: relative; 
+    overflow: hidden; 
+    width: 100%; 
+    max-width: 600px; 
+    margin: auto;">
+    
+    <video id="video-file" style="
+        width: 100%; 
+        height: auto; 
+        border-radius: 10px; 
+        transition: opacity 0.5s, transform 0.5s;">
+        <source src="video.mp4" type="video/mp4">
+    </video>
+
+    <button class="button button--flex video__button" id="video-button" style="
+        position: absolute; 
+        top: 50%; 
+        left: 50%; 
+        transform: translate(-50%, -50%); 
+        background: rgba(0, 0, 0, 0.5); 
+        border: none; 
+        border-radius: 50%; 
+        padding: 10px; 
+        cursor: pointer; 
+        transition: background-color 0.3s;">
+        <i class="ri-play-line video__button-icon" id="video-icon" style="
+            color: white; 
+            font-size: 24px;">
+        </i>
+    </button>
+</div>
+                </div>
+            </section>--// -->
+
+            <!--==================== PLACES ====================-->
+            <section class="place section" id="place">
+                <h2 class="section__title">What's on City-Info</h2>
+
+                <div class="place__container container grid">
+                    <!--==================== PLACES CARD 1 ====================-->
+                    <div class="place__card">
+                        <pre>
+                 City-info is packed with features to enhance your city experience:
+
+                 Interactive Transportation Tools: Effortlessly plan your journey with real-time transport options, fare comparisons,
+                 and route flowcharts Shopping Guides: Discover the best markets and stores for everything you need, from clothes to
+                 electronics, with recommendations for cost-effective purchases.Tourist Hotspots: Explore the must-see attractions 
+                 with comprehensive details on each site, including distance from your location and available transport options. 
+                 Safety Alerts: Stay informed about crime-prone areas with our interactive map, which updates in real-time and 
+                 provides AI-powered safety alerts to ensure your peace of mind. With its user-friendly design, personalized 
+                 recommendations, and multilingual support, City-info makes exploring a new city straightforward and enjoyable.
+                                              
+                        </pre>
+                        <img src="" alt="" class="place__img">
+                        
+                        <!-- <div class="place__content">
+                            <span class="place__rating">
+                                <i class="ri-star-line place__rating-icon"></i>
+                                <span class="place__rating-number">4,8</span>
+                            </span>
+
+                            <div class="place__data">
+                                <h3 class="place__title">Bali</h3>
+                                <span class="place__subtitle">Indonesia</span>
+                                <span class="place__price">$2499</span>
+                            </div>
+                        </div>
+
+                        <button class="button button--flex place__button">
+                            <i class="ri-arrow-right-line"></i>
+                        </button>
+                    </div> -->
+
+                    <!--==================== PLACES CARD 2 ====================-->
+                    <div class="place__card">
+                        <img src="" alt="" class="place__img">
+                        
+                        <div class="place__content">
+                            <span class="place__rating">
+                                <i class="ri-star-line place__rating-icon"></i>
+                                <span class="place__rating-number">5,0</span>
+                            </span>
+
+                            <div class="place__data">
+                                <h3 class="place__title">Bora Bora</h3>
+                                <span class="place__subtitle">Polinesia</span>
+                                <span class="place__price">$1599</span>
+                            </div>
+                        </div>
+
+                        <button class="button button--flex place__button">
+                            <i class="ri-arrow-right-line"></i>
+                        </button>
+                    </div>
+
+                    <!--==================== PLACES CARD 3 ====================-->
+                    <div class="place__card">
+                        <img src="" alt="" class="place__img">
+                        
+                        <div class="place__content">
+                            <span class="place__rating">
+                                <i class="ri-star-line place__rating-icon"></i>
+                                <span class="place__rating-number">4,9</span>
+                            </span>
+
+                            <div class="place__data">
+                                <h3 class="place__title">Hawaii</h3>
+                                <span class="place__subtitle">EE.UU</span>
+                                <span class="place__price">$3499</span>
+                            </div>
+                        </div>
+
+                        <button class="button button--flex place__button">
+                            <i class="ri-arrow-right-line"></i>
+                        </button>
+                    </div>
+
+                    <!--==================== PLACES CARD 4 ====================-->
+                    <div class="place__card">
+                        <img src="" alt="" class="place__img">
+                        
+                        <div class="place__content">
+                            <span class="place__rating">
+                                <i class="ri-star-line place__rating-icon"></i>
+                                <span class="place__rating-number">4,8</span>
+                            </span>
+
+                            <div class="place__data">
+                                <h3 class="place__title">Whitehaven</h3>
+                                <span class="place__subtitle">Australia</span>
+                                <span class="place__price">$2499</span>
+                            </div>
+                        </div>
+
+                        <button class="button button--flex place__button">
+                            <i class="ri-arrow-right-line"></i>
+                        </button>
+                    </div>
+
+                    <!--==================== PLACES CARD 5 ====================-->
+                    <div class="place__card">
+                        <img src="assets/img/place5.jpg" alt="" class="place__img">
+                        
+                        <div class="place__content">
+                            <span class="place__rating">
+                                <i class="ri-star-line place__rating-icon"></i>
+                                <span class="place__rating-number">4,8</span>
+                            </span>
+
+                            <div class="place__data">
+                                <h3 class="place__title">Hvar</h3>
+                                <span class="place__subtitle">Croacia</span>
+                                <span class="place__price">$1999</span>
+                            </div>
+                        </div>
+
+                        <button class="button button--flex place__button">
+                            <i class="ri-arrow-right-line"></i>
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!--==================== SUBSCRIBE ====================-->
+            <section class="subscribe section">
+                <div class="subscribe__bg"  style="background-color: #001d3d;">
+                    <div class="subscribe__container container" style="background-color: #001d3d;">
+                        <h2 class="section__title subscribe__title">Enter your <br> Feedback</h2>
+                        <p class="subscribe__description">
+                        </p>
+    
+                        <form action="" class="subscribe__form">
+                            <input type="text" placeholder="Enter Feedback" class="subscribe__input">
+    
+                            <button class="button" style="background-color: #001d3d;">
+                                Enter
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+            
+            <!--==================== SPONSORS ====================-->
+            <section class="sponsor section">
+                <div class="sponsor__container container grid">
+                    <div class="sponsor__content">
+                        <img src="assets/img/sponsors1.png" alt="" class="sponsor__img">
+                    </div>
+                    <div class="sponsor__content">
+                        <img src="assets/img/sponsors2.png" alt="" class="sponsor__img">
+                    </div>
+                    <div class="sponsor__content">
+                        <img src="assets/img/sponsors3.png" alt="" class="sponsor__img">
+                    </div>
+                    <div class="sponsor__content">
+                        <img src="assets/img/sponsors4.png" alt="" class="sponsor__img">
+                    </div>
+                    <div class="sponsor__content">
+                        <img src="assets/img/sponsors5.png" alt="" class="sponsor__img">
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!--==================== FOOTER ====================-->
+        <footer class="footer section">
+            <div class="footer__container container grid">
+                <div class="footer__content grid">
+                    <div class="footer__data">
+                        <h3 class="footer__title">Travel</h3>
+                        <p class="footer__description">Travel you choose the <br> destination, 
+                            we offer you the <br> experience.
+                        </p>
+                        <div>
+                            <a href="https://www.facebook.com/" target="_blank" class="footer__social">
+                                <i class="ri-facebook-box-fill"></i>
+                            </a>
+                            <a href="https://twitter.com/" target="_blank" class="footer__social">
+                                <i class="ri-twitter-fill"></i>
+                            </a>
+                            <a href="https://www.instagram.com/" target="_blank" class="footer__social">
+                                <i class="ri-instagram-fill"></i>
+                            </a>
+                            <a href="https://www.youtube.com/" target="_blank" class="footer__social">
+                                <i class="ri-youtube-fill"></i>
+                            </a>
+                        </div>
+                    </div>
+    
+                    <div class="footer__data">
+                        <h3 class="footer__subtitle">About</h3>
+                        <ul>
+                            <li class="footer__item">
+                                <a href="" class="footer__link">About Us</a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="" class="footer__link">Features</a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="" class="footer__link">New & Blog</a>
+                            </li>
+                        </ul>
+                    </div>
+    
+                    <div class="footer__data">
+                        <h3 class="footer__subtitle">Premium</h3>
+                        <ul>
+                            <li class="footer__item">
+                                <a href="" class="footer__link">City guide</a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="" class="footer__link">personalized guidance</a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="" class="footer__link">Pre Booking</a>
+                            </li>
+                        </ul>
+                    </div>
+    
+                    <div class="footer__data">
+                        <h3 class="footer__subtitle">Support</h3>
+                        <ul>
+                            <li class="footer__item">
+                                <a href="" class="footer__link">FAQs</a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="" class="footer__link">Support Center</a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="" class="footer__link">Contact Us</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div style="position: fixed; bottom: 20px; right: 20px; z-index: 1000;">
+                    <button 
+                        style="background-color: #007bff; color: white; border: none; padding: 12px 20px; font-size: 16px; 
+                               font-weight: bold; border-radius: 30px; cursor: pointer; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); 
+                               transition: 0.3s;"
+                        onmouseover="this.style.backgroundColor='#0056b3'; this.style.transform='scale(1.05)';"
+                        onmouseout="this.style.backgroundColor='#007bff'; this.style.transform='scale(1)';">
+                        <a href="https://hackathon-travel-h1i9.vercel.app/">FIND YOUR DESTINATION</a>
+                    </button>
+                </div>
+
+                <div class="footer__rights">
+                    <p class="footer__copy">&#169; 2025 Creed. All rigths reserved.</p>
+                    <div class="footer__terms">
+                        <a href="#v" class="footer__terms-link">Terms & Agreements</a>
+                        <a href="#" class="footer__terms-link">Privacy Policy</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+         <!--========== SCROLL UP ==========-->
+        <a href="#" class="scrollup" id="scroll-up">
+            <i class="ri-arrow-up-line scrollup__icon"></i>
+        </a>
+
+        <!--=============== SCROLL REVEAL===============-->
+        <script src="script.js">
+            /*! @license ScrollReveal v4.0.9
+
+	Copyright 2021 Fisssion LLC.
+
+	Licensed under the GNU General Public License 3.0 for
+	compatible open source projects and non-commercial use.
+
+	For commercial sites, themes, projects, and applications,
+	keep your source code private/proprietary by purchasing
+	a commercial license from https://scrollrevealjs.org/
+*/
+    

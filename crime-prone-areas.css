@@ -1,0 +1,187 @@
+
+/* Root color variables based on City-info theme */
+:root {
+    --primary-color: #14213D;
+    --secondary-color: #14213d;
+    --highlight-color: #fca311;
+    --light-color: #e5e5e5;
+    --white-color: #ffffff;
+    --danger-color: #ff4c4c; /* Red color to highlight unsafe areas */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--light-color);
+    color: var(--primary-color);
+    line-height: 1.6;
+}
+
+/* Navigation Bar Styling */
+.navbar {
+    background-color: var(--primary-color);
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo img {
+    width: 150px;
+    height: auto;
+}
+
+.nav-links {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li {
+    margin: 0 20px;
+}
+
+.nav-links a {
+    color: var(--white-color);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--highlight-color);
+}
+
+/* Main Content Styling */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h2 {
+    text-align: center;
+    color: var(--secondary-color);
+    margin-bottom: 20px;
+    font-size: 2rem;
+    border-bottom: 2px solid var(--highlight-color);
+    padding-bottom: 10px;
+}
+
+h3 {
+    color: var(--secondary-color);
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+
+/* Map Section */
+.map-container {
+    position: relative;
+    border: 5px solid var(--highlight-color);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.map-section {
+    margin-bottom: 40px;
+}
+
+/* Crime Updates Section */
+.updates-section {
+    margin-bottom: 40px;
+}
+
+.updates-container {
+    background-color: var(--white-color);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.crime-updates {
+    list-style-type: none;
+    color: var(--primary-color);
+    font-size: 1.1rem;
+}
+
+.crime-updates li {
+    margin-bottom: 15px;
+    padding-left: 10px;
+    border-left: 5px solid var(--danger-color);
+}
+
+.crime-updates li .highlight {
+    color: var(--danger-color);
+    font-size: 1.5rem;
+    margin-right: 10px;
+}
+
+/* Helpline Section */
+.helpline-section {
+    background-color: var(--light-color);
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 40px;
+    text-align: center;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.helpline-container p {
+    font-size: 1.2rem;
+    color: var(--secondary-color);
+    margin: 10px 0;
+}
+
+/* Footer */
+footer {
+    background-color: var(--secondary-color);
+    color: var(--white-color);
+    text-align: center;
+    padding: 40px 20px;
+    margin-top: 40px;
+    border-top: 5px solid var(--highlight-color);
+}
+
+footer p {
+    margin: 10px 0;
+    font-size: 1rem;
+}
+
+footer a {
+    color: var(--highlight-color);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: var(--white-color);
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .map-container {
+        height: 300px;
+    }
+
+    .crime-updates {
+        font-size: 1rem;
+    }
+
+    .helpline-container p {
+        font-size: 1rem;
+    }
+}

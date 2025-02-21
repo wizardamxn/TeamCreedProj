@@ -1,0 +1,239 @@
+/* Root color variables based on City-info theme */
+:root {
+    --primary-color: #000000;
+    --secondary-color: #14213d;
+    --highlight-color: #fca311;
+    --light-color: #e5e5e5;
+    --white-color: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--light-color);
+    color: var(--primary-color);
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+/* Navigation Bar Styling */
+.navbar {
+    background-color: #14213D;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo img {
+    width: 150px;
+    height: auto;
+}
+
+.nav-links {
+    list-style-type: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 20px;
+}
+
+.nav-links a {
+    color: var(--white-color);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--highlight-color);
+}
+
+/* Container for centralized sections */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h2 {
+    text-align: center;
+    color: var(--secondary-color);
+    margin-bottom: 30px;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-bottom: 2px solid var(--highlight-color);
+    padding-bottom: 10px;
+}
+
+/* Famous Places Section */
+.places-section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.place-item {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    gap: 20px;
+}
+
+.place-image {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.details-container {
+    flex: 1;
+    background-color: var(--white-color);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.details h3 {
+    color: var(--secondary-color);
+    margin-bottom: 10px;
+}
+
+.details p {
+    margin-bottom: 15px;
+}
+
+/* Image hover effect removed */
+.place-image:hover {
+    transform: none;
+}
+
+/* Footer */
+footer {
+    background-color: var(--secondary-color);
+    color: var(--white-color);
+    text-align: center;
+    padding: 40px 20px;
+    margin-top: 40px;
+    border-top: 5px solid var(--highlight-color);
+}
+
+footer p {
+    margin: 10px 0;
+    font-size: 1rem;
+}
+
+footer a {
+    color: var(--highlight-color);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: var(--white-color);
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .places-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .place-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .place-image {
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+    }
+
+    .details-container {
+        width: 100%;
+        margin-top: 20px;
+        box-shadow: none;
+    }
+
+    .details h3 {
+        font-size: 1.5rem;
+    }
+
+    .details p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    .place-image {
+        max-width: 100%;
+    }
+
+    .details-container {
+        padding: 10px;
+    }
+
+    footer {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-links a {
+        font-size: 1rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .details h3 {
+        font-size: 1.2rem;
+    }
+
+    .details p {
+        font-size: 0.9rem;
+    }
+
+    .place-item {
+        gap: 10px;
+    }
+}
